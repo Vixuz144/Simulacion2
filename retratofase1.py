@@ -6,6 +6,7 @@ import pylab as pl
 # The 2-dimensional linear system.
 
 def dx_dt(x, t):
+    global a, b, c, d
     return [a*x[0] + b*x[1], c*x[0] + d*x[1]]
 
 # The 2-dimensional nonlinear system.
@@ -14,6 +15,7 @@ def dx_dt2(x, t):
 
 
 def lacosa(a = 2, b = 1, c = 1, d = 2):
+    global a, b, c, d
     ts = np.linspace(0, -4, 100)
     ic = np.linspace(-1, 1, 5)
     for r in ic:
