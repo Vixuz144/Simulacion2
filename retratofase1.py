@@ -14,8 +14,9 @@ def dx_dt2(x, t):
     return [x[1], x[0] * (1 - x[0]**2) + x[1]]
 
 
-def lacosa(a = 2, b = 1, c = 1, d = 2):
+def lacosa(aa = 2, bb = 1, cc = 1, dd = 2):
     global a, b, c, d
+    a, b, c, d = aa, bb, cc, dd
     ts = np.linspace(0, -4, 100)
     ic = np.linspace(-1, 1, 5)
     for r in ic:
